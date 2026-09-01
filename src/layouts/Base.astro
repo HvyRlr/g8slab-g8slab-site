@@ -1,0 +1,63 @@
+---
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>{title} | g8slab</title>
+  <link rel="stylesheet" href="../styles/globals.css" />
+</head>
+<body>
+  <Nav logo="g8slab" menu_items={{
+    label: 'Home',
+    href: '/',
+  }, {{
+    label: 'About',
+    href: '/about',
+  }, {{
+    label: 'Services',
+    href: '/services',
+  }, {{
+    label: 'Contact',
+    href: '/contact',
+  }}} />
+
+  <main>
+    <slot />
+  </main>
+
+  <Footer company_name="g8slab" />
+</body>
+</html>
+
+<style is:global>
+  * {{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }}
+
+  html {{
+    font-family: var(--font-body);
+    background: #f9fafb;
+    color: #1f2937;
+  }}
+
+  body {{
+    line-height: 1.6;
+  }}
+
+  main {{
+    min-height: calc(100vh - 200px);
+  }}
+</style>

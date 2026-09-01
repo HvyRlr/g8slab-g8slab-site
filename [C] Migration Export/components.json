@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Hero",
+    "file": "src/components/Hero.astro",
+    "props": [
+      "title",
+      "subtitle",
+      "image",
+      "cta_text",
+      "cta_link"
+    ],
+    "wp_equivalent": "core/cover"
+  },
+  {
+    "name": "Card",
+    "file": "src/components/Card.astro",
+    "props": [
+      "title",
+      "description",
+      "icon",
+      "image",
+      "cta_text",
+      "cta_link"
+    ],
+    "wp_equivalent": "custom/card-block"
+  },
+  {
+    "name": "Section",
+    "file": "src/components/Section.astro",
+    "props": [
+      "title",
+      "content",
+      "layout",
+      "image"
+    ],
+    "wp_equivalent": "core/group"
+  },
+  {
+    "name": "Nav",
+    "file": "src/components/Nav.astro",
+    "props": [
+      "logo",
+      "menu_items"
+    ],
+    "wp_equivalent": "custom/navigation"
+  },
+  {
+    "name": "Footer",
+    "file": "src/components/Footer.astro",
+    "props": [
+      "company_name",
+      "year"
+    ],
+    "wp_equivalent": "custom/footer"
+  },
+  {
+    "name": "CardGrid",
+    "file": "src/components/CardGrid.astro",
+    "props": [],
+    "wp_equivalent": "core/columns"
+  },
+  {
+    "name": "CTA",
+    "file": "src/components/CTA.astro",
+    "props": [
+      "text",
+      "link",
+      "style"
+    ],
+    "wp_equivalent": "core/button"
+  }
+]

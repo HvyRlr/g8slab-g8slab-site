@@ -1,0 +1,15 @@
+{
+  "layout_template": "hero-cards",
+  "color_scheme": "light",
+  "typography": {
+    "heading_font": "Inter",
+    "body_font": "Poppins",
+    "heading_sizes": [
+      32,
+      28,
+      24,
+      20
+    ],
+    "body_size": 16
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "pages": [
+    {
+      "slug": "home",
+      "title": "Home",
+      "layout": "hero-cards"
+    },
+    {
+      "slug": "about",
+      "title": "About",
+      "layout": "hero-cards"
+    },
+    {
+      "slug": "services",
+      "title": "Services",
+      "layout": "hero-cards"
+    }
+  ],
+  "images": {}
+}

@@ -1,0 +1,33 @@
+---
+interface Props {
+  title?: string;
+  content: string;
+  layout?: 'text-only' | 'text-image' | 'grid';
+  image?: string;
+}
+
+const { title, content, layout = 'text-only', image } = Astro.props;
+---
+
+<section class="py-16 px-4" style="background-color: var(--color-neutral)">
+  <div class="max-w-4xl mx-auto">
+    {title && <h2 class="text-4xl font-bold mb-8 font-heading text-primary">{title}</h2>}
+
+    {layout === 'text-only' && (
+      <div class="text-lg leading-relaxed text-gray-700 font-body" set:html={content} />
+    )}
+
+    {layout === 'text-image' && image && (
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div class="text-lg leading-relaxed text-gray-700 font-body" set:html={content} />
+        <img src={image} alt={title} class="rounded-lg shadow-lg" />
+      </div>
+    )}
+
+    {layout === 'grid' && (
+      <div class="grid md:grid-cols-3 gap-6">
+        <slot />
+      </div>
+    )}
+  </div>
+</section>

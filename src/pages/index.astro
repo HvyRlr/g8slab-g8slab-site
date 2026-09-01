@@ -1,0 +1,39 @@
+---
+import Base from '../layouts/Base.astro';
+import Hero from '../components/Hero.astro';
+import CardGrid from '../components/CardGrid.astro';
+import Card from '../components/Card.astro';
+import Section from '../components/Section.astro';
+---
+
+<Base title="Home">
+  <Hero
+    title="Welcome to g8slab"
+    subtitle="Building amazing experiences"
+    cta_text="Get Started"
+    cta_link="/contact"
+  />
+
+  <CardGrid>
+    <Card
+      icon="⚡"
+      title="Fast"
+      description="Lightning-quick performance and load times"
+    />
+    <Card
+      icon="🎨"
+      title="Beautiful"
+      description="Stunning design that captures attention"
+    />
+    <Card
+      icon="🚀"
+      title="Scalable"
+      description="Built to grow with your business"
+    />
+  </CardGrid>
+
+  <Section
+    title="About Us"
+    content="<p>We create exceptional digital experiences that drive results. Our team combines expertise, creativity, and passion to deliver solutions that matter.</p>"
+  />
+</Base>
