@@ -18,19 +18,12 @@ const { title } = Astro.props;
   <link rel="stylesheet" href="../styles/globals.css" />
 </head>
 <body>
-  <Nav logo="g8slab" menu_items={{
-    label: 'Home',
-    href: '/',
-  }, {{
-    label: 'About',
-    href: '/about',
-  }, {{
-    label: 'Services',
-    href: '/services',
-  }, {{
-    label: 'Contact',
-    href: '/contact',
-  }}} />
+  <Nav logo="g8slab" menu_items={[
+    { label: 'Home', href: '/' },
+    { label: 'About', href: '/about' },
+    { label: 'Services', href: '/services' },
+    { label: 'Contact', href: '/contact' },
+  ]} />
 
   <main>
     <slot />
@@ -41,23 +34,23 @@ const { title } = Astro.props;
 </html>
 
 <style is:global>
-  * {{
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }}
+  }
 
-  html {{
+  html {
     font-family: var(--font-body);
     background: #f9fafb;
     color: #1f2937;
-  }}
+  }
 
-  body {{
+  body {
     line-height: 1.6;
-  }}
+  }
 
-  main {{
+  main {
     min-height: calc(100vh - 200px);
-  }}
+  }
 </style>
