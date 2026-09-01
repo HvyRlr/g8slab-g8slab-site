@@ -1,0 +1,42 @@
+:root {
+  --color-primary: #030712;
+  --color-secondary: #050915;
+  --color-neutral: #020611;
+
+  --font-heading: "Inter", sans-serif;
+  --font-body: "Poppins", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-body);
+  background: #f9fafb;
+  color: #1f2937;
+}
+
+body {
+  line-height: 1.6;
+}
+
+main {
+  min-height: calc(100vh - 200px);
+}
+
+/* Tailwind color mapping */
+:root {
+  --tw-colors-primary: #030712;
+  --tw-colors-secondary: #050915;
+  --tw-colors-neutral: #020611;
+}
+
+/* Hero section gradient */
+@supports (background: linear-gradient(135deg, var(--color-primary), var(--color-secondary))) {
+  .bg-gradient-to-r {
+    background: linear-gradient(to right, var(--color-primary), var(--color-secondary)) !important;
+  }
+}
